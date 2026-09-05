@@ -1,3 +1,16 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Env files — never commit real secrets (Master Prompt §10)
 .env
 .env.local
-node_modules/
+.env.*.local
+
+# Editor/OS
+.DS_Store
+.vscode/
+*.log
