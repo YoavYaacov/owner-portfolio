@@ -289,3 +289,258 @@ a {
   justify-content: center;
   padding: 40px 0;
 }
+
+/* ---------- Phase 3: nav ---------- */
+
+.app-header__brand-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.app-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.app-nav__link {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.app-nav__link--active {
+  color: var(--color-info);
+  border-bottom-color: var(--color-info);
+}
+
+/* ---------- Phase 3: dashboard sections ---------- */
+
+.dashboard-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard-toolbar__links {
+  display: flex;
+  gap: 20px;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  margin: 28px 0 4px;
+}
+
+.section-title:first-child {
+  margin-top: 0;
+}
+
+.section-subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin: 0 0 14px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.stat-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 16px 18px;
+}
+
+.stat-card--attention {
+  border-color: var(--color-attention);
+}
+
+.stat-card--critical {
+  border-color: var(--color-critical);
+}
+
+.stat-card__label {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.stat-card__value {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.stat-card__note {
+  font-size: 0.75rem;
+  color: var(--color-attention);
+  margin-top: 6px;
+}
+
+/* ---------- Phase 3: tooltips ---------- */
+
+.tooltip-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: help;
+}
+
+.tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--color-neutral-bg);
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.tooltip-bubble {
+  position: absolute;
+  z-index: 10;
+  top: 120%;
+  right: 0;
+  width: 260px;
+  max-width: 70vw;
+  background: var(--color-text);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.4;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  box-shadow: var(--shadow-card);
+}
+
+/* ---------- Phase 3: attention list ---------- */
+
+.attention-list {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.attention-list__item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+}
+
+.attention-list__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.attention-list__name {
+  font-weight: 600;
+}
+
+.attention-list__reasons {
+  margin: 8px 0 0;
+  padding-inline-start: 18px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Phase 3: tables ---------- */
+
+.table-scroll {
+  overflow-x: auto;
+  margin-bottom: 8px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px 14px;
+  text-align: right;
+  font-size: 0.88rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.data-table th {
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------- Phase 3: empty states ---------- */
+
+.empty-state {
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+.empty-state p {
+  margin: 0 0 14px;
+}
+
+/* ---------- Phase 3: data-entry forms ---------- */
+
+.entry-form {
+  max-width: 460px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 24px;
+}
+
+.btn-inline {
+  width: auto;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+select.text-input {
+  appearance: auto;
+}
