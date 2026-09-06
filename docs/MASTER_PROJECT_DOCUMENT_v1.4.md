@@ -20,7 +20,7 @@ handoff pattern Phase 2 used.
 ## Phase 3 Deliverables (this session)
 
 **Database — 5 new migrations (`supabase/migrations/0011-0015`)**
-- `transaction_categories` — data-driven (SRS §14), seeded with all 20
+- `transaction_categories` — data-driven (SRS §14), seeded with all 21
   categories from the SRS, `category_group` drives NOI/CapEx/Financing
   classification.
 - `loans` — financing terms + last-known balance with a mandatory
