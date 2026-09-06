@@ -7,6 +7,11 @@ import LoginPage from './pages/LoginPage'
 import ForgotPasswordPage from './pages/ForgotPasswordPage'
 import ResetPasswordPage from './pages/ResetPasswordPage'
 import DashboardPage from './pages/DashboardPage'
+import PropertiesPage from './pages/PropertiesPage'
+import AddPropertyPage from './pages/AddPropertyPage'
+import AddLoanPage from './pages/AddLoanPage'
+import AddTransactionPage from './pages/AddTransactionPage'
+import AddFxRatePage from './pages/AddFxRatePage'
 
 // HashRouter is the deliberate default for GitHub Pages static hosting
 // (Master Prompt §8 / ADR-018) — it needs no server-side rewrite rules.
@@ -27,6 +32,14 @@ export default function App() {
 
           <Route element={<ProtectedRoute />}>
             <Route path="/dashboard" element={<DashboardPage />} />
+            {/* Phase 3 (SRS §43): Properties + minimal data entry for Loans/
+                Transactions. A dedicated Property detail page (SRS §34) is
+                still Phase 4+ — see ADR-026. */}
+            <Route path="/properties" element={<PropertiesPage />} />
+            <Route path="/properties/new" element={<AddPropertyPage />} />
+            <Route path="/loans/new" element={<AddLoanPage />} />
+            <Route path="/transactions/new" element={<AddTransactionPage />} />
+            <Route path="/fx-rates/new" element={<AddFxRatePage />} />
           </Route>
 
           <Route path="/" element={<RootRedirect />} />
